@@ -11,10 +11,24 @@ function mobilePrice( simple ){
         mobileInputText=parseInt(mobileInputText) - 1;
     }
     mobileInput.value=mobileInputText;
-    const phonePrice=document.getElementById('mobile-price')
+    const phonePrice=document.getElementById('mobile-total')
     phonePrice.innerText=mobileInputText * 1213;
 };
 
+// handle case incrsi and discrise event
+   document.getElementById('case-plus').addEventListener('click', function(){
+        console.log('case plus clicked')
+   })
+
+
+   document.getElementById('case-minus').addEventListener('click', function(){
+
+   })
+
+
+
+
+// handle phone incrise and discris event
 document.getElementById('phone-plus').addEventListener('click',function(){
     mobilePrice(true);
     // const mobileInput=document.getElementById('mobile-input');
