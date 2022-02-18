@@ -1,6 +1,6 @@
 
-function mobilePrice( simple ){
-    const mobileInput=document.getElementById('phone-number');
+function mobilePrice(items, simple ){
+    const mobileInput=document.getElementById(items + '-number');
     console.log(mobileInput);
     let mobileInputText=mobileInput.value;
     if(simple == true){
@@ -17,6 +17,7 @@ function mobilePrice( simple ){
 
 // handle case incrsi and discrise event
    document.getElementById('case-plus').addEventListener('click', function(){
+    mobilePrice('case',true);
         console.log('case plus clicked')
    })
 
@@ -30,12 +31,12 @@ function mobilePrice( simple ){
 
 // handle phone incrise and discris event
 document.getElementById('phone-plus').addEventListener('click',function(){
-    mobilePrice(true);
+    mobilePrice('mobile', true);
     // const mobileInput=document.getElementById('mobile-input');
     // const mobileInputText=mobileInput.value;
     // mobileInput.value=parseInt(mobileInputText) + 1;
 });
 document.getElementById('phone-minus').addEventListener('click', function(){
     console.log('clicked')
-    mobilePrice(false);
+    mobilePrice('mobile', false);
 });
